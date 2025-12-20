@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhon Emerwin | Content Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+        /* Custom Scrollbar for the Carousel */
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #171717; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+    </style>
+</head>
+<body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased">
+
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-gold font-heading tracking-widest text-sm">JH.EMERWIN</div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon.emerwin05@gmail.com" target="_blank" class="text-xs tracking-[0.2em] uppercase hover:text-gold transition duration-300">
+                Contact Me
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-10">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-heading font-bold text-white/5 whitespace-nowrap select-none">
+            PRECISION
+        </div>
+
+        <div class="relative z-10 fade-in" style="animation-delay: 0.2s;">
+            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4">Content Operations Specialist</p>
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
+                Your Content. <br> <span class="text-white/50">Multiplied.</span>
+            </h1>
+            <p class="text-neutral-400 max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-10">
+                I help creators and founders turn 1 video into 10 assets. 
+                <br>I use my tech background to build the systems, but my focus is on your message.
+            </p>
+            <a href="#work" class="inline-block border border-gold text-gold px-10 py-3 text-xs tracking-[0.2em] hover:bg-gold hover:text-black transition duration-300 uppercase">
+                View Portfolio
+            </a>
+        </div>
+    </header>
+
+    <div class="bg-white text-black py-3 border-y border-white overflow-hidden marquee-container">
+        <div class="marquee-content font-heading text-sm font-bold tracking-[0.1em] uppercase">
+             // OPEN FOR WORK // CONTENT REPURPOSING // SOCIAL MEDIA STRATEGY // OPEN FOR WORK // CONTENT REPURPOSING // SOCIAL MEDIA STRATEGY // OPEN FOR WORK // CONTENT REPURPOSING 
+        </div>
+    </div>
+
+    <section id="about" class="py-24 container mx-auto px-6 max-w-4xl">
+        <div class="flex justify-center mb-10">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 border border-gold/50">
+                <img src="profile.jpg" alt="Jhon Emerwin" class="w-full h-full object-cover rounded-full">
+            </div>
+        </div>
+
+        <div class="text-center space-y-8 mb-20">
+            <h2 class="font-heading text-3xl text-white">About Me</h2>
+            <div class="w-16 h-1 bg-gold mx-auto"></div>
+            
+            <div class="text-neutral-400 leading-relaxed text-lg space-y-6">
+                <p>Hi, I'm Jhon Emerwin. I specialize in maximizing the lifespan of your content.</p>
+                <p>While my background is in Information Technology, I don't define myself just by code. I use my tech skills as a <strong>force multiplier</strong> for your content. I understand the tools, the platforms, and the algorithms, allowing me to build workflows that save you time.</p>
+                <p>My goal is simple: To help you show up everywhere, without you having to be everywhere.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-16">
+            <h3 class="text-center text-gold text-xs tracking-[0.2em] uppercase mb-10">Software & Tools</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                    <div class="font-bold text-white mb-1">Notion</div>
+                    <div class="text-xs text-neutral-500">Workspace Management</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                    <div class="font-bold text-white mb-1">Canva Pro</div>
+                    <div class="text-xs text-neutral-500">Graphic Design</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                    <div class="font-bold text-white mb-1">Google Drive</div>
+                    <div class="text-xs text-neutral-500">Asset Organization</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                    <div class="font-bold text-white mb-1">Gmail/Cal</div>
+                    <div class="text-xs text-neutral-500">Comms & Scheduling</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 bg-neutral-900/50">
+        <div class="container mx-auto px-6">
+            <h2 class="font-heading text-center text-3xl mb-16 tracking-widest text-white">Selected Works</h2>
+
+            <div class="group relative mb-24 grid md:grid-cols-2 gap-10 items-center">
+                
+                <div class="relative w-full rounded-xl overflow-hidden border border-white/10 bg-[#0f1014] p-6 shadow-2xl group transition duration-500 hover:border-gold/30">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-[80px] -mr-16 -mt-16 pointer-events-none"></div>
+
+                    <div class="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
+                        <div class="text-[10px] font-mono text-gold tracking-widest uppercase flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                            Live Case Study
+                        </div>
+                        <div class="text-[10px] text-neutral-500 font-mono">ID: #CS-001</div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-black/40 p-3 rounded-lg border border-white/5">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-neutral-500 text-[10px] font-mono">INPUT: JASON_FRIED_TED.MP4</span>
+                            </div>
+                            <div class="relative rounded overflow-hidden aspect-video bg-neutral-800 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.1)] transition duration-500">
+                                <iframe 
+                                    class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-300"
+                                    src="https://www.youtube.com/embed/5XD2kNopsUs?rel=0&modestbranding=1&controls=1" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between">
+                            <div>
+                                <div class="text-neutral-500 text-[10px] font-mono mb-3">OUTPUT GENERATED</div>
+                                <div class="flex items-center gap-3 mb-3 bg-white/5 p-2 rounded border border-white/5 hover:bg-white/10 transition">
+                                    <div class="text-blue-400 text-xs">●</div>
+                                    <div>
+                                        <div class="text-white text-xs font-bold">"The Sleep Analogy" Thread</div>
+                                        <div class="text-[10px] text-neutral-500">Twitter (Viral Thread)</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 mb-3 bg-white/5 p-2 rounded border border-white/5 hover:bg-white/10 transition">
+                                    <div class="text-blue-400 text-xs">●</div>
+                                    <div>
+                                        <div class="text-white text-xs font-bold">"The M&Ms" Article</div>
+                                        <div class="text-[10px] text-neutral-500">LinkedIn Strategy</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 mb-3 bg-white/5 p-2 rounded border border-white/5 hover:bg-white/10 transition">
+                                    <div class="text-purple-400 text-xs">●</div>
+                                    <div>
+                                        <div class="text-white text-xs font-bold">"No-Talk Thursdays"</div>
+                                        <div class="text-[10px] text-neutral-500">Instagram Reel Script</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mt-4">
+                                <div class="bg-gold/10 p-2 rounded text-center border border-gold/20">
+                                    <div class="text-[10px] text-gold/70">TOPIC</div>
+                                    <div class="text-gold font-bold text-xs">Productivity</div>
+                                </div>
+                                <div class="bg-white/5 p-2 rounded text-center border border-white/10">
+                                    <div class="text-[10px] text-neutral-500">FORMAT</div>
+                                    <div class="text-white font-bold text-xs">TED Talk</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="text-gold text-xs tracking-[0.2em] uppercase">Video Repurposing</div>
+                    <h3 class="font-heading text-3xl">The "9-to-5 is Dead" Campaign</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Took a raw 12-minute Zoom rant from a Founder and converted it into a viral Twitter thread and LinkedIn strategy.
+                    </p>
+                    <div class="pt-4">
+                        <a href="https://drive.google.com/file/d/1yC3QErs3MPaNW5nnh0Cm1i67Kxy4PJQV/view?usp=drive_link" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition">VIEW PDF DOCUMENT</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative grid md:grid-cols-2 gap-10 items-center">
+                
+                <div class="md:order-1 space-y-6 md:text-right">
+                    <div class="text-gold text-xs tracking-[0.2em] uppercase">Strategic Design</div>
+                    <h3 class="font-heading text-3xl">Pricing Strategy Masterclass</h3>
+                    <p class="text-neutral-400 leading-relaxed">
+                        Transformed a complex 1-hour webinar into digestible Instagram carousels and actionable quote graphics. 
+                        <span class="block mt-2 text-gold/70 text-xs italic">Try scrolling the gallery on the right →</span>
+                    </p>
+                    <div class="pt-4 flex justify-end gap-3">
+                         <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition">VIEW STRATEGY PDF</a>
+                    </div>
+                </div>
+
+                <div class="md:order-2 w-full rounded-xl overflow-hidden border border-white/10 bg-[#0f1014] p-6 shadow-2xl group transition duration-500 hover:border-gold/30">
+                    
+                    <div class="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
+                        <div class="text-[10px] font-mono text-gold tracking-widest uppercase flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            Live Asset Preview
+                        </div>
+                        <div class="text-[10px] text-neutral-500 font-mono">ID: #CS-002</div>
+                    </div>
+
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 custom-scrollbar">
+                        
+                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
+                            <img src="slide1.jpg" alt="Slide 1" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
+                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">1/5</div>
+                        </div>
+
+                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
+                            <img src="slide2.jpg" alt="Slide 2" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
+                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">2/5</div>
+                        </div>
+
+                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
+                            <img src="slide3.jpg" alt="Slide 3" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
+                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">3/5</div>
+                        </div>
+
+                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
+                            <img src="slide4.jpg" alt="Slide 4" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
+                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">4/5</div>
+                        </div>
+
+                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
+                            <img src="slide5.jpg" alt="Slide 5" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
+                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">5/5</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <h2 class="font-heading text-center text-3xl mb-16 text-white">Service Rates</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-lg overflow-hidden">
+            <div class="bg-dark p-12 text-center hover:bg-white/5 transition duration-300">
+                <div class="text-gold text-xs tracking-[0.2em] uppercase mb-2">* PART TIME</div>
+                <div class="text-4xl font-heading font-bold text-white mb-6">$800<span class="text-sm font-body text-neutral-500">/mo</span></div>
+                <p class="text-neutral-400 text-sm mb-8 h-12">Ideal for creators who need consistent content flow without a full team.</p>
+                <ul class="text-left space-y-4 text-sm text-neutral-300 mb-10 mx-auto max-w-[200px]">
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> 4 Hours / Day</li>
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Content Repurposing</li>
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Email Management</li>
+                </ul>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon.emerwin05@gmail.com" target="_blank" class="block w-full border border-white/20 text-white py-3 text-xs font-bold tracking-widest hover:bg-white hover:text-black transition">INQUIRE</a>
+            </div>
+            <div class="bg-dark p-12 text-center hover:bg-white/5 transition duration-300 relative">
+                <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Best Value</div>
+                <div class="text-gold text-xs tracking-[0.2em] uppercase mb-2">** FULL TIME</div>
+                <div class="text-4xl font-heading font-bold text-white mb-6">$1,500<span class="text-sm font-body text-neutral-500">/mo</span></div>
+                <p class="text-neutral-400 text-sm mb-8 h-12">For business owners ready to fully delegate operations and content.</p>
+                <ul class="text-left space-y-4 text-sm text-neutral-300 mb-10 mx-auto max-w-[200px]">
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> 8 Hours / Day</li>
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Full Social Strategy</li>
+                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Tech Automation</li>
+                </ul>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon.emerwin05@gmail.com" target="_blank" class="block w-full bg-gold text-black py-3 text-xs font-bold tracking-widest hover:bg-white transition">INQUIRE</a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-neutral-500 text-xs tracking-widest space-y-2">
+            <p>* Part time is inclusive of 80 hours a month</p>
+            <p>** Full time is inclusive of 160 hours a month</p>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/10">
+        <h2 class="font-heading text-2xl mb-8">Ready to Scale?</h2>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon.emerwin05@gmail.com" target="_blank" class="inline-block bg-white text-black px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-gold transition duration-300">
+            BOOK A CONSULTATION
+        </a>
+        <p class="mt-12 text-neutral-600 text-xs tracking-widest">
+            © 2025 Jhon Emerwin. ALL RIGHTS RESERVED.
+        </p>
+    </footer>
+
+</body>
+</html>
