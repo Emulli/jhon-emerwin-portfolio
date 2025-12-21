@@ -8,18 +8,18 @@
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600;800&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         heading: ['Cinzel', 'serif'],
-                        body: ['Manrope', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'], // Updated to Montserrat
                     },
                     colors: {
-                        gold: '#D4AF37',
-                        dark: '#0a0a0a',
+                        gold: '#F4C430', // Updated to Saffron Gold
+                        dark: '#050505', // Updated to Deep Black
                     }
                 }
             }
@@ -32,11 +32,11 @@
         .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-        /* Custom Scrollbar for the Carousel */
+        /* Custom Scrollbar */
         .custom-scrollbar::-webkit-scrollbar { height: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #171717; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #F4C430; }
     </style>
 </head>
 <body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased">
@@ -208,46 +208,73 @@
                     <h3 class="font-heading text-3xl">Pricing Strategy Masterclass</h3>
                     <p class="text-neutral-400 leading-relaxed">
                         Transformed a complex 1-hour webinar into digestible Instagram carousels and actionable quote graphics. 
-                        <span class="block mt-2 text-gold/70 text-xs italic">Try scrolling the gallery on the right →</span>
                     </p>
-                    <div class="pt-4 flex justify-end gap-3">
-                         <a href="https://drive.google.com/file/d/1zZmxpqi8O-chY5supRie-XEINTaNW12P/view?usp=drive_link" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition">VIEW STRATEGY PDF</a>
-                    </div>
+                    <p class="text-gold/70 text-xs italic">
+                        Interactive Carousel →
+                    </p>
                 </div>
 
-                <div class="md:order-2 w-full rounded-xl overflow-hidden border border-white/10 bg-[#0f1014] p-6 shadow-2xl group transition duration-500 hover:border-gold/30">
+                <div class="md:order-2 w-full">
+                     <div class="max-w-md mx-auto bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-2xl">
                     
-                    <div class="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
-                        <div class="text-[10px] font-mono text-gold tracking-widest uppercase flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                            Live Asset Preview
+                        <div class="p-6 border-b border-neutral-800 flex justify-between items-center bg-black">
+                            <div>
+                                <div class="text-gold text-xs font-bold tracking-[0.2em] mb-1">
+                                    CONFIDENTIAL STRATEGY
+                                </div>
+                                <h2 class="text-2xl font-bold text-white font-heading tracking-wide">
+                                    THE VALUE PROTOCOL
+                                </h2>
+                            </div>
+                            <div class="bg-gold/10 border border-gold/20 text-gold px-3 py-1 text-xs tracking-widest rounded">
+                                CS-002
+                            </div>
                         </div>
-                        <div class="text-[10px] text-neutral-500 font-mono">ID: #CS-002</div>
-                    </div>
 
-                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 custom-scrollbar">
-                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
-                            <img src="slide1.png" alt="Slide 1" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
-                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">1/5</div>
+                        <div class="relative aspect-[4/5] bg-black group">
+                            <img 
+                                id="strategySlide" 
+                                src="slide1.png" 
+                                alt="Strategy Slide" 
+                                class="w-full h-full object-contain transition-opacity duration-300"
+                            >
+
+                            <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 border border-white/10 cursor-pointer z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            </button>
+                            
+                            <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-3 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 border border-white/10 cursor-pointer z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </button>
+
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="dotsContainer">
+                                <div class="h-1 w-8 bg-gold rounded-full transition-all duration-300 dot"></div>
+                                <div class="h-1 w-2 bg-neutral-700 rounded-full transition-all duration-300 dot"></div>
+                                <div class="h-1 w-2 bg-neutral-700 rounded-full transition-all duration-300 dot"></div>
+                                <div class="h-1 w-2 bg-neutral-700 rounded-full transition-all duration-300 dot"></div>
+                                <div class="h-1 w-2 bg-neutral-700 rounded-full transition-all duration-300 dot"></div>
+                            </div>
                         </div>
-                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
-                            <img src="slide2.png" alt="Slide 2" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
-                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">2/5</div>
-                        </div>
-                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
-                            <img src="slide3.png" alt="Slide 3" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
-                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">3/5</div>
-                        </div>
-                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
-                            <img src="slide4.jpg" alt="Slide 4" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
-                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">4/5</div>
-                        </div>
-                        <div class="snap-center shrink-0 w-[70%] md:w-[200px] aspect-[4/5] rounded-lg border border-white/10 overflow-hidden relative group/img">
-                            <img src="slide5.jpg" alt="Slide 5" class="w-full h-full object-cover opacity-90 group-hover/img:opacity-100 transition">
-                            <div class="absolute bottom-2 right-2 bg-black/50 px-2 py-1 text-[10px] text-white backdrop-blur-sm rounded">5/5</div>
+
+                        <div class="p-6 bg-neutral-900 border-t border-neutral-800">
+                            <div class="flex flex-col gap-4 justify-between items-center">
+                                <div class="flex items-center gap-3 text-neutral-400 text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4C430" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    <span>Full Briefing Document (PDF)</span>
+                                </div>
+                                
+                                <a 
+                                    href="CS_002_Pricing_Strategy.pdf" 
+                                    download="CS_002_Pricing_Strategy.pdf"
+                                    class="flex items-center gap-2 bg-white text-black px-6 py-3 rounded text-sm font-bold tracking-widest hover:bg-gold hover:scale-105 transition-all w-full justify-center"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                    DOWNLOAD INTEL
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    </div>
 
             </div>
         </div>
@@ -301,6 +328,49 @@
             © 2025 Jhon Emerwin. ALL RIGHTS RESERVED.
         </p>
     </footer>
+
+    <script>
+        const slides = [
+          'slide1.png',
+          'slide2.png',
+          'slide3.png',
+          'slide4.png',
+          'slide5.png'
+        ];
+        let currentIndex = 0;
+    
+        function changeSlide(direction) {
+          currentIndex += direction;
+    
+          // Loop Logic
+          if (currentIndex >= slides.length) {
+            currentIndex = 0;
+          } else if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+          }
+    
+          // Update Image
+          const imgElement = document.getElementById('strategySlide');
+          imgElement.style.opacity = '0'; // Fade out
+          
+          setTimeout(() => {
+              imgElement.src = slides[currentIndex];
+              imgElement.style.opacity = '1'; // Fade in
+          }, 300);
+    
+          // Update Dots
+          const dots = document.getElementsByClassName('dot');
+          for (let i = 0; i < dots.length; i++) {
+            if (i === currentIndex) {
+              dots[i].classList.remove('w-2', 'bg-neutral-700');
+              dots[i].classList.add('w-8', 'bg-gold');
+            } else {
+              dots[i].classList.remove('w-8', 'bg-gold');
+              dots[i].classList.add('w-2', 'bg-neutral-700');
+            }
+          }
+        }
+    </script>
 
 </body>
 </html>
