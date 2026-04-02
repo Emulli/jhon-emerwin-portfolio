@@ -54,10 +54,15 @@
     </nav>
 
     <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-10 z-10">
+        
+        <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+            <div class="w-[120vw] md:w-[80vw] h-[60vh] backdrop-blur-lg bg-dark/40" style="-webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);"></div>
+        </div>
+
         <div class="relative z-10 fade-in" style="animation-delay: 0.2s;">
             <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 drop-shadow-md">Welcome</p>
-            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight drop-shadow-xl">
-                Building Digital <br> <span class="text-gold/50">INTERFACES.</span>
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight drop-shadow-2xl">
+                Building Digital <br> <span class="text-gold">INTERFACES.</span>
             </h1>
             <p class="text-neutral-400 max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-10 drop-shadow-md">
                 I specialize in building robust web platforms and scalable digital systems. 
