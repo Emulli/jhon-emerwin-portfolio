@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerwin Portfolio</title>
+    <title>Emerwin | IT Portfolio</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -39,7 +39,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #F4C430; }
     </style>
 </head>
-<body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased relative">
+<body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased relative overflow-x-hidden">
 
     <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-heading font-bold text-white/30 whitespace-nowrap select-none tracking-widest z-0 pointer-events-none">
         PRECISION
@@ -76,9 +76,12 @@
     </div>
 
     <section id="about" class="py-24 container mx-auto px-6 max-w-4xl relative z-10 bg-dark/40 backdrop-blur-sm rounded-3xl mt-12 mb-12 border border-white/5">
-        <div class="flex justify-center mb-10">
-            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 border border-gold/50 bg-dark">
-                <img src="profile.jpg" alt="Emerwin" class="w-full h-full object-cover rounded-full">
+        
+        <div class="flex justify-center mb-10 relative z-50">
+            <div class="w-32 h-32 md:w-40 md:h-40 relative" id="profile-container">
+                <div id="profile-pic" class="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 border border-gold/50 bg-dark absolute inset-0 cursor-grab touch-none shadow-[0_0_30px_rgba(244,196,48,0.1)] hover:scale-105 will-change-transform z-50">
+                    <img src="profile.jpg" alt="Emerwin" class="w-full h-full object-cover rounded-full pointer-events-none select-none">
+                </div>
             </div>
         </div>
 
@@ -146,10 +149,10 @@
                                 class="w-full h-full object-cover opacity-60 group-hover/slider:opacity-100 transition-opacity duration-300 cursor-pointer"
                                 onclick="openLightbox(this.src)"
                             >
-                            <button onclick="changeOjtSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
+                            <button onclick="changeOjtSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                             </button>
-                            <button onclick="changeOjtSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
+                            <button onclick="changeOjtSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                             </button>
                             <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="ojtDotsContainer">
@@ -164,8 +167,7 @@
                     <div class="text-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Web Infrastructure</div>
                     <h3 class="font-heading text-3xl drop-shadow-lg">Web Developer Intern</h3>
                     <p class="text-neutral-300 leading-relaxed drop-shadow-md">
-                        Completed a comprehensive <strong>300-hour professional training program</strong> developing the official e-learning and assessment platform for TVLSTC. Engineered responsive front-end interfaces designed to streamline digital learning workflows, handle student assessments, and deliver a seamless educational experience.
-                    </p>
+                    Completed a comprehensive <strong>300-hour professional training program</strong> developing the official e-learning and assessment platform for TVLSTC. Engineered responsive front-end interfaces designed to streamline digital learning workflows, handle student assessments, and deliver a seamless educational experience.                    </p>
                 </div>
             </div>
 
@@ -175,8 +177,7 @@
                     <div class="text-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Academic Capstone</div>
                     <h3 class="font-heading text-3xl drop-shadow-lg">Microfinance Logistics II</h3>
                     <p class="text-neutral-300 leading-relaxed drop-shadow-md">
-                        Spearheaded the mobile application architecture for a comprehensive microfinance logistics platform. Key contributions included engineering the core GPS tracking system for real-time monitoring and successfully integrated a Scikit-learn AI model to drive data-backed probability and predictive features.
-                    </p>
+                    Spearheaded the mobile application architecture for a comprehensive microfinance logistics platform. Key contributions included engineering the core GPS tracking system for real-time monitoring and successfully integrated a Scikit-learn AI model to drive data-backed probability and predictive features.                    </p>
                     <div class="pt-4 flex flex-col md:items-end gap-2">
                         <a href="https://genrey.vercel.app/?fbclid=IwY2xjawQ6p4JleHRuA2FlbQIxMABicmlkETF4azhUTWU3cFZiYnRoVUZKc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkZ1rOBwv8HHZHzPjXyAZWx42sAIOdmZJXt0jDc5OZl5E1hHkfQEP5BXWaUO_aem_NosLu9_AaaJsfZWA606F8Q" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition inline-block drop-shadow-md">
                             VIEW LIVE PLATFORM
@@ -258,7 +259,7 @@
             <div class="bg-dark/90 backdrop-blur-sm p-8 md:p-12 text-center hover:bg-dark transition duration-300 relative">
                 <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Hire Me</div>
                 <div class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Full Overview</div>
-                <div class="text-2xl md:text-4xl font-heading font-bold text-white mb-6 pt-4 leading-tight">Resume</div>
+                <div class="text-2xl md:text-4xl font-heading font-bold text-white mb-6 pt-4 leading-tight">Curriculum Vitae</div>
                 <p class="text-neutral-300 text-sm mb-8 h-auto md:h-12">A complete breakdown of my academic background, technical stack, and professional deployment.</p>
                 
                 <ul class="text-left space-y-4 text-sm text-neutral-300 mb-10 mx-auto max-w-[200px]">
@@ -311,7 +312,8 @@
             <button onclick="closeModal('resumeModal')" class="md:hidden absolute top-4 right-4 text-white z-20 bg-black/50 p-2 rounded-full leading-none">✕</button>
 
             <div class="w-full md:w-1/2 bg-neutral-900 relative min-h-[250px] md:min-h-0 md:h-full border-b md:border-b-0 md:border-r border-white/5 flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-black/40">
+                
+                <div class="absolute inset-0 flex flex-col md:hidden items-center justify-center p-8 text-center bg-black/40 z-10">
                     <div class="text-gold mb-4 opacity-50">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                     </div>
@@ -320,6 +322,8 @@
                         Direct viewing is disabled to prevent mobile errors. Please use the button below to safely download the full file.
                     </p>
                 </div>
+
+                <iframe src="Resume.pdf#toolbar=0" title="Resume Preview" class="hidden md:block absolute inset-0 w-full h-full border-none"></iframe>
             </div>
 
             <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center h-auto md:h-full">
@@ -335,7 +339,7 @@
                     A comprehensive breakdown of my academic background, technical proficiencies, and professional deployment history.
                 </p>
 
-                <a href="Emerwin_Resume.pdf" download class="w-full flex items-center justify-center gap-3 bg-gold text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white transition duration-300">
+                <a href="Resume.pdf" download class="w-full flex items-center justify-center gap-3 bg-gold text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                     Download PDF Document
                 </a>
@@ -448,6 +452,117 @@
               dots[i].classList.add('w-2', 'bg-neutral-700');
             }
           }
+        }
+
+        // --- UPDATED: INTERACTIVE PROFILE PICTURE PHYSICS (PURE DVD BOUNCE) ---
+        const profilePic = document.getElementById('profile-pic');
+        const container = document.getElementById('profile-container');
+        
+        let isDragging = false;
+        let pos = { x: 0, y: 0 };
+        let vel = { x: 0, y: 0 };
+        let lastMousePos = { x: 0, y: 0 };
+        let lastTime = 0;
+        let animationFrame;
+
+        // Prevent default drag behavior
+        profilePic.ondragstart = function() { return false; };
+
+        // Attach Event Listeners
+        profilePic.addEventListener('mousedown', dragStart);
+        profilePic.addEventListener('touchstart', dragStart, {passive: false});
+        window.addEventListener('mousemove', drag);
+        window.addEventListener('touchmove', drag, {passive: false});
+        window.addEventListener('mouseup', dragEnd);
+        window.addEventListener('touchend', dragEnd);
+
+        function dragStart(e) {
+            isDragging = true;
+            profilePic.style.cursor = 'grabbing';
+            profilePic.style.transition = 'none'; 
+            
+            let clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            let clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+            
+            lastMousePos = { x: clientX, y: clientY };
+            lastTime = performance.now();
+            
+            cancelAnimationFrame(animationFrame); 
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+            if (e.cancelable) e.preventDefault(); 
+            
+            let clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            let clientY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+            
+            let dx = clientX - lastMousePos.x;
+            let dy = clientY - lastMousePos.y;
+            
+            pos.x += dx;
+            pos.y += dy;
+            
+            profilePic.style.transform = `translate(${pos.x}px, ${pos.y}px) scale(1.05)`;
+            
+            let now = performance.now();
+            let dt = Math.max(1, now - lastTime); 
+            
+            vel.x = (dx / dt) * 15; 
+            vel.y = (dy / dt) * 15;
+            
+            lastMousePos = { x: clientX, y: clientY };
+            lastTime = now;
+        }
+
+        function dragEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+            profilePic.style.cursor = 'grab';
+            
+            animationFrame = requestAnimationFrame(physicsLoop);
+        }
+
+        function physicsLoop() {
+            if (isDragging) return;
+            
+            // Apply very light friction so it bounces a lot before stopping
+            vel.x *= 0.985; 
+            vel.y *= 0.985;
+            
+            pos.x += vel.x;
+            pos.y += vel.y;
+
+            // Screen Boundary Collisions (True Elastic Bounce)
+            const rect = profilePic.getBoundingClientRect();
+            
+            // Bounce Right
+            if (rect.right >= window.innerWidth && vel.x > 0) {
+                vel.x *= -1; // Perfect reverse bounce
+                pos.x -= (rect.right - window.innerWidth); // Push back inside
+            }
+            // Bounce Left
+            if (rect.left <= 0 && vel.x < 0) {
+                vel.x *= -1;
+                pos.x += Math.abs(rect.left);
+            }
+            // Bounce Bottom
+            if (rect.bottom >= window.innerHeight && vel.y > 0) {
+                vel.y *= -1;
+                pos.y -= (rect.bottom - window.innerHeight); 
+            }
+            // Bounce Top
+            if (rect.top <= 0 && vel.y < 0) {
+                vel.y *= -1;
+                pos.y += Math.abs(rect.top);
+            }
+            
+            profilePic.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+            
+            // Continue the loop until velocity is basically zero
+            if (Math.abs(vel.x) > 0.5 || Math.abs(vel.y) > 0.5) {
+                animationFrame = requestAnimationFrame(physicsLoop);
+            }
         }
     </script>
 
