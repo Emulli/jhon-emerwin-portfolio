@@ -146,10 +146,10 @@
                                 class="w-full h-full object-cover opacity-60 group-hover/slider:opacity-100 transition-opacity duration-300 cursor-pointer"
                                 onclick="openLightbox(this.src)"
                             >
-                            <button onclick="changeOjtSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
+                            <button onclick="changeOjtSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                             </button>
-                            <button onclick="changeOjtSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
+                            <button onclick="changeOjtSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black p-2 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover/slider:opacity-100 border border-white/10 cursor-pointer z-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                             </button>
                             <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="ojtDotsContainer">
@@ -311,7 +311,6 @@
             <button onclick="closeModal('resumeModal')" class="md:hidden absolute top-4 right-4 text-white z-20 bg-black/50 p-2 rounded-full leading-none">✕</button>
 
             <div class="w-full md:w-1/2 bg-neutral-900 relative min-h-[250px] md:min-h-0 md:h-full border-b md:border-b-0 md:border-r border-white/5 flex items-center justify-center overflow-hidden">
-                
                 <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-black/40">
                     <div class="text-gold mb-4 opacity-50">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
@@ -321,8 +320,7 @@
                         Direct viewing is disabled to prevent mobile errors. Please use the button below to safely download the full file.
                     </p>
                 </div>
-                
-                </div>
+            </div>
 
             <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center h-auto md:h-full">
                 <div class="flex justify-between items-start mb-6">
