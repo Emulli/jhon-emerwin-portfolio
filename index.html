@@ -39,7 +39,11 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #F4C430; }
     </style>
 </head>
-<body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased">
+<body class="bg-dark text-white font-body selection:bg-gold selection:text-black antialiased relative">
+
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-heading font-bold text-white/30 whitespace-nowrap select-none tracking-widest z-0 pointer-events-none">
+        PRECISION
+    </div>
 
     <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -49,35 +53,31 @@
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-10">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-heading font-bold text-white/15 whitespace-nowrap select-none">
-            PRECISION
-        </div>
-
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-10 z-10">
         <div class="relative z-10 fade-in" style="animation-delay: 0.2s;">
-            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4">Welcome</p>
-            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
+            <p class="text-gold text-sm tracking-[0.3em] uppercase mb-4 drop-shadow-md">Welcome</p>
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight drop-shadow-xl">
                 Building Digital <br> <span class="text-white/50">Ecosystems.</span>
             </h1>
-            <p class="text-neutral-400 max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-10">
+            <p class="text-neutral-400 max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-10 drop-shadow-md">
                 I specialize in building robust web platforms and scalable digital systems. 
                 <br>Focused on front-end architecture, responsive design, and precise user interfaces.
             </p>
-            <a href="#work" class="inline-block border border-gold text-gold px-10 py-3 text-xs tracking-[0.2em] hover:bg-gold hover:text-black transition duration-300 uppercase">
+            <a href="#work" class="inline-block border border-gold bg-dark/50 backdrop-blur-sm text-gold px-10 py-3 text-xs tracking-[0.2em] hover:bg-gold hover:text-black transition duration-300 uppercase">
                 View Portfolio
             </a>
         </div>
     </header>
 
-    <div class="bg-white text-black py-3 border-y border-white overflow-hidden marquee-container">
+    <div class="bg-white text-black py-3 border-y border-white overflow-hidden marquee-container relative z-10">
         <div class="marquee-content font-heading text-sm font-bold tracking-[0.1em] uppercase">
              // FRONT-END DEVELOPMENT // RESPONSIVE UI DESIGN // WEB ARCHITECTURE // SYSTEM INTEGRATION // FRONT-END DEVELOPMENT // RESPONSIVE UI DESIGN // WEB ARCHITECTURE //
         </div>
     </div>
 
-    <section id="about" class="py-24 container mx-auto px-6 max-w-4xl">
+    <section id="about" class="py-24 container mx-auto px-6 max-w-4xl relative z-10 bg-dark/40 backdrop-blur-sm rounded-3xl mt-12 mb-12 border border-white/5">
         <div class="flex justify-center mb-10">
-            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 border border-gold/50">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 border border-gold/50 bg-dark">
                 <img src="profile.jpg" alt="Emerwin" class="w-full h-full object-cover rounded-full">
             </div>
         </div>
@@ -86,7 +86,7 @@
             <h2 class="font-heading text-3xl text-white">About Me</h2>
             <div class="w-16 h-1 bg-gold mx-auto"></div>
             
-            <div class="text-neutral-400 leading-relaxed text-lg space-y-6">
+            <div class="text-neutral-300 leading-relaxed text-lg space-y-6 drop-shadow-md">
                 <p>Hi, I'm Emerwin. I am an Information Technology student with a passion for building systems that deliver real-world utility.</p>
                 <p>My core focus spans front-end web development, responsive interface design, and functional system integration. Whether I am contributing to live web projects during my professional training or structuring platform data for my capstone, my priority is delivering a reliable, seamless user experience.</p>
                 <p>I am an adaptable learner, always leveraging the right tools to build practical solutions that simply work.</p>
@@ -94,31 +94,31 @@
         </div>
 
         <div class="border-t border-white/10 pt-16">
-            <h3 class="text-center text-gold text-xs tracking-[0.2em] uppercase mb-10">Technical Arsenal</h3>
+            <h3 class="text-center text-gold text-xs tracking-[0.2em] uppercase mb-10 drop-shadow-md">Technical Arsenal</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                <div class="bg-dark/80 border border-white/10 p-6 rounded hover:border-gold/30 transition">
                     <div class="font-bold text-white mb-1">VS Code</div>
-                    <div class="text-xs text-neutral-500">Development</div>
+                    <div class="text-xs text-neutral-400">Development</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                <div class="bg-dark/80 border border-white/10 p-6 rounded hover:border-gold/30 transition">
                     <div class="font-bold text-white mb-1">GitHub</div>
-                    <div class="text-xs text-neutral-500">Version Control</div>
+                    <div class="text-xs text-neutral-400">Version Control</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                <div class="bg-dark/80 border border-white/10 p-6 rounded hover:border-gold/30 transition">
                     <div class="font-bold text-white mb-1">Figma / Canva</div>
-                    <div class="text-xs text-neutral-500">UI / UX Design</div>
+                    <div class="text-xs text-neutral-400">UI / UX Design</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded hover:border-gold/30 transition">
+                <div class="bg-dark/80 border border-white/10 p-6 rounded hover:border-gold/30 transition">
                     <div class="font-bold text-white mb-1">Databases</div>
-                    <div class="text-xs text-neutral-500">Data Management</div>
+                    <div class="text-xs text-neutral-400">Data Management</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="work" class="py-24 bg-neutral-900/50">
+    <section id="work" class="py-24 bg-neutral-900/80 relative z-10 border-y border-white/5 backdrop-blur-md">
         <div class="container mx-auto px-6">
-            <h2 class="font-heading text-center text-3xl mb-16 tracking-widest text-white">Experience & Projects</h2>
+            <h2 class="font-heading text-center text-3xl mb-16 tracking-widest text-white drop-shadow-lg">Experience & Projects</h2>
 
             <div class="group relative mb-24 grid md:grid-cols-2 gap-10 items-center">
                 
@@ -138,7 +138,7 @@
                             <span class="text-neutral-500 text-[10px] font-mono">FILE: WEB_DEPLOYMENT.HTML</span>
                             <span class="text-gold text-[10px] font-mono animate-pulse">CLICK TO EXPAND</span>
                         </div>
-                        <div class="relative rounded overflow-hidden w-full aspect-video bg-neutral-800 transition duration-500 group/slider">
+                        <div class="relative rounded overflow-hidden w-full aspect-video bg-neutral-800 transition duration-500 group/slider border border-white/5">
                             <img 
                                 id="ojtSlide" 
                                 src="site1.jpg" 
@@ -161,9 +161,9 @@
                 </div>
                 
                 <div class="space-y-6">
-                    <div class="text-gold text-xs tracking-[0.2em] uppercase">Web Infrastructure</div>
-                    <h3 class="font-heading text-3xl">Front-End Engineering OJT</h3>
-                    <p class="text-neutral-400 leading-relaxed">
+                    <div class="text-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Web Infrastructure</div>
+                    <h3 class="font-heading text-3xl drop-shadow-lg">Front-End Engineering OJT</h3>
+                    <p class="text-neutral-300 leading-relaxed drop-shadow-md">
                         Completed a comprehensive <strong>300-hour professional training program</strong> focusing on active website development. Handled live deployment tasks, translating design architectures into functional, responsive web interfaces while maintaining existing digital infrastructure.
                     </p>
                 </div>
@@ -172,13 +172,13 @@
             <div class="group relative grid md:grid-cols-2 gap-10 items-center">
                 
                 <div class="md:order-1 space-y-6 md:text-right">
-                    <div class="text-gold text-xs tracking-[0.2em] uppercase">Academic Capstone</div>
-                    <h3 class="font-heading text-3xl">Microfinance Logistics ll</h3>
-                    <p class="text-neutral-400 leading-relaxed">
+                    <div class="text-gold text-xs tracking-[0.2em] uppercase drop-shadow-md">Academic Capstone</div>
+                    <h3 class="font-heading text-3xl drop-shadow-lg">Microfinance Logistics ll</h3>
+                    <p class="text-neutral-300 leading-relaxed drop-shadow-md">
                         Engineered front-end components for a comprehensive microfinance logistics platform. Focused on structuring the web interface, streamlining user workflows, and ensuring accurate data representation across the system's ecosystem.
                     </p>
                     <div class="pt-4 flex flex-col md:items-end gap-2">
-                        <a href="https://genrey.vercel.app/?fbclid=IwY2xjawQ6p4JleHRuA2FlbQIxMABicmlkETF4azhUTWU3cFZiYnRoVUZKc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkZ1rOBwv8HHZHzPjXyAZWx42sAIOdmZJXt0jDc5OZl5E1hHkfQEP5BXWaUO_aem_NosLu9_AaaJsfZWA606F8Q" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition inline-block">
+                        <a href="https://genrey.vercel.app/?fbclid=IwY2xjawQ6p4JleHRuA2FlbQIxMABicmlkETF4azhUTWU3cFZiYnRoVUZKc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkZ1rOBwv8HHZHzPjXyAZWx42sAIOdmZJXt0jDc5OZl5E1hHkfQEP5BXWaUO_aem_NosLu9_AaaJsfZWA606F8Q" target="_blank" class="text-white text-xs border-b border-white pb-1 hover:text-gold hover:border-gold transition inline-block drop-shadow-md">
                             VIEW LIVE PLATFORM
                         </a>
                     </div>
@@ -205,10 +205,10 @@
                             <div class="flex justify-end mb-2">
                                 <span class="text-gold text-[10px] font-mono animate-pulse">CLICK TO EXPAND</span>
                             </div>
-                            <div class="relative aspect-[4/5] bg-black group/slider rounded overflow-hidden">
+                            <div class="relative aspect-[4/5] bg-black group/slider rounded overflow-hidden border border-white/5">
                                 <img 
                                     id="strategySlide" 
-                                    src="cap3.jpg" 
+                                    src="cap1.jpg" 
                                     alt="System Screenshot" 
                                     class="w-full h-full object-cover opacity-80 transition-opacity duration-300 cursor-pointer hover:opacity-100"
                                     onclick="openLightbox(this.src)"
@@ -236,34 +236,34 @@
         </div>
     </section>
 
-    <section class="py-24 container mx-auto px-6">
-        <h2 class="font-heading text-center text-3xl md:text-4xl mb-16 text-white">Credentials & Docs</h2>
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-lg overflow-hidden">
+    <section class="py-24 container mx-auto px-6 relative z-10">
+        <h2 class="font-heading text-center text-3xl md:text-4xl mb-16 text-white drop-shadow-lg">Credentials & Docs</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-lg overflow-hidden shadow-2xl">
             
-            <div class="bg-dark p-8 md:p-12 text-center hover:bg-white/5 transition duration-300">
+            <div class="bg-dark/90 backdrop-blur-sm p-8 md:p-12 text-center hover:bg-dark transition duration-300">
                 <div class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Verified</div>
                 <div class="text-3xl md:text-4xl font-heading font-bold text-white mb-6 pt-4">Certification</div>
-                <p class="text-neutral-400 text-sm mb-8 h-auto md:h-12">Official recognition of my foundational technical skills and commitment to continuous learning.</p>
+                <p class="text-neutral-300 text-sm mb-8 h-auto md:h-12">Official recognition of my foundational technical skills and commitment to continuous learning.</p>
                 
                 <ul class="text-left space-y-4 text-sm text-neutral-300 mb-10 mx-auto max-w-[200px]">
-                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Technical Proficiency</li>
-                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Industry Standard</li>
+                    <li class="flex gap-3 text-neutral-400"><span class="text-gold">✓</span> Technical Proficiency</li>
+                    <li class="flex gap-3 text-neutral-400"><span class="text-gold">✓</span> Industry Standard</li>
                 </ul>
                 
-                <button onclick="openModal('certModal')" class="block w-full border border-white/20 text-white py-3 text-xs font-bold tracking-widest hover:bg-white hover:text-black transition">
+                <button onclick="openModal('certModal')" class="block w-full border border-white/20 text-white py-3 text-xs font-bold tracking-widest hover:bg-white hover:text-black transition bg-black/50">
                     VIEW CERTIFICATE
                 </button>
             </div>
 
-            <div class="bg-dark p-8 md:p-12 text-center hover:bg-white/5 transition duration-300 relative">
+            <div class="bg-dark/90 backdrop-blur-sm p-8 md:p-12 text-center hover:bg-dark transition duration-300 relative">
                 <div class="absolute top-0 right-0 bg-gold text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Hire Me</div>
                 <div class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Full Overview</div>
                 <div class="text-2xl md:text-4xl font-heading font-bold text-white mb-6 pt-4 leading-tight">Curriculum Vitae</div>
-                <p class="text-neutral-400 text-sm mb-8 h-auto md:h-12">A complete breakdown of my academic background, technical stack, and professional deployment.</p>
+                <p class="text-neutral-300 text-sm mb-8 h-auto md:h-12">A complete breakdown of my academic background, technical stack, and professional deployment.</p>
                 
                 <ul class="text-left space-y-4 text-sm text-neutral-300 mb-10 mx-auto max-w-[200px]">
-                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Project History</li>
-                    <li class="flex gap-3 text-neutral-500"><span class="text-gold">✓</span> Software Capabilities</li>
+                    <li class="flex gap-3 text-neutral-400"><span class="text-gold">✓</span> Project History</li>
+                    <li class="flex gap-3 text-neutral-400"><span class="text-gold">✓</span> Software Capabilities</li>
                 </ul>
                 
                 <button onclick="openModal('resumeModal')" class="block w-full bg-gold text-black py-3 text-xs font-bold tracking-widest hover:bg-white transition">
@@ -274,12 +274,12 @@
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/10">
-        <h2 class="font-heading text-2xl mb-8">Ready to Build?</h2>
+    <footer class="py-20 text-center border-t border-white/10 relative z-10 bg-dark/80 backdrop-blur-sm">
+        <h2 class="font-heading text-2xl mb-8 drop-shadow-md">Ready to Build?</h2>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon.emerwin05@gmail.com" target="_blank" class="inline-block bg-white text-black px-12 py-4 text-xs font-bold tracking-[0.2em] hover:bg-gold transition duration-300">
             SEND AN EMAIL
         </a>
-        <p class="mt-12 text-neutral-600 text-xs tracking-widest">
+        <p class="mt-12 text-neutral-500 text-xs tracking-widest drop-shadow-md">
             © 2026 Emerwin. ALL RIGHTS RESERVED.
         </p>
     </footer>
@@ -288,7 +288,7 @@
         <div onclick="closeModal('imageModal')" class="absolute inset-0 bg-black/95 backdrop-blur-md cursor-pointer"></div>
         <div id="imageContent" class="relative z-10 w-full max-w-6xl transform scale-95 transition-transform duration-500 p-2 flex justify-center items-center">
             <button onclick="closeModal('imageModal')" class="absolute -top-12 right-0 md:right-4 text-white hover:text-gold transition text-4xl leading-none font-light">✕</button>
-            <img id="lightboxImage" src="" alt="Expanded View" class="max-w-full max-h-[90vh] object-contain rounded border border-white/10 shadow-2xl">
+            <img id="lightboxImage" src="" alt="Expanded View" class="max-w-full max-h-[90vh] object-contain rounded border border-white/10 shadow-2xl bg-black">
         </div>
     </div>
 
